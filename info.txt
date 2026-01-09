@@ -1,0 +1,12 @@
+This photography studio is a modern, editorial-style creative brand focused on intentional, story-driven imagery based in west london, UK. The studio positions itself as more than a service provider — it delivers a curated visual experience that blends artistic direction, emotional depth, and polished aesthetics. The brand tone is confident, elevated, and design-forward, drawing inspiration from magazine editorials, print media, and luxury branding.
+
+The landing page should feel like a launch announcement rather than a traditional photography website — bold headlines, strong typography, minimal but impactful copy, and immersive visuals. Content should emphasize the studio’s philosophy, signature style, and client experience, with clear calls to action for bookings. Overall, the experience should communicate credibility, creativity, and intention, appealing to clients who value artistry, storytelling, and a refined visual identity.
+
+Colours: #FCF9F2 , #343434 , #ffffff & #000000 
+
+Sections: 
+1- About 
+2- Work (this should be a seperate page with a clean minimalist grid with previous work photos)
+3- Clients (seperate page for client case studies)
+4- Contact - short form + location + number + email etc
+
