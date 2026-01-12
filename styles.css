@@ -29,8 +29,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: var(--cream);
     color: var(--dark-gray);
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 16px;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -61,12 +64,16 @@ body {
 }
 
 .logo {
-    font-family: 'Delight', sans-serif;
-    font-weight: 900;
-    font-size: 24px;
-    color: var(--black);
+    display: inline-block;
     text-decoration: none;
-    letter-spacing: -0.5px;
+    line-height: 0;
+}
+
+.logo-img {
+    height: 64px;
+    width: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -76,11 +83,11 @@ body {
 }
 
 .nav-link {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--dark-gray);
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -117,35 +124,59 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 120px 40px 80px;
-    text-align: center;
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000000 0%, rgba(252, 249, 242, 0.05) 50%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 2;
+    pointer-events: none;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 3;
     max-width: 900px;
-}
-
-.hero-title {
-    font-family: 'Delight', sans-serif;
-    font-weight: 900;
-    font-size: clamp(48px, 8vw, 120px);
-    line-height: 1.1;
-    color: var(--black);
-    margin-bottom: 40px;
-    letter-spacing: -2px;
+    padding: 0 40px;
+    text-align: center;
 }
 
 .hero-subtitle {
-    font-size: clamp(16px, 2vw, 20px);
-    color: var(--dark-gray);
-    max-width: 700px;
+    font-size: clamp(17px, 2.2vw, 21px);
+    color: var(--white);
+    max-width: 65ch;
     margin: 0 auto;
-    line-height: 1.8;
-    font-weight: 300;
+    line-height: 1.75;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* About Section */
@@ -164,20 +195,23 @@ body {
 .section-title {
     font-family: 'Delight', sans-serif;
     font-weight: 900;
-    font-size: clamp(36px, 5vw, 72px);
+    font-size: clamp(32px, 4.5vw, 64px);
     line-height: 1.1;
     color: var(--black);
-    letter-spacing: -1px;
+    letter-spacing: -1.2px;
+    margin-bottom: 0;
 }
 
 .about-description {
-    font-size: 18px;
-    line-height: 1.9;
+    font-size: 17px;
+    line-height: 1.8;
     color: var(--dark-gray);
+    max-width: 65ch;
+    letter-spacing: -0.1px;
 }
 
 .about-description p {
-    margin-bottom: 24px;
+    margin-bottom: 1.5em;
 }
 
 .about-description p:last-child {
@@ -203,16 +237,19 @@ body {
 .philosophy-title {
     font-family: 'Delight', sans-serif;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 26px;
     color: var(--black);
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
 }
 
 .philosophy-text {
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.75;
     color: var(--dark-gray);
+    max-width: 50ch;
+    letter-spacing: -0.1px;
 }
 
 /* CTA Section */
@@ -226,15 +263,21 @@ body {
 .cta-title {
     font-family: 'Delight', sans-serif;
     font-weight: 900;
-    font-size: clamp(36px, 5vw, 64px);
-    margin-bottom: 20px;
-    letter-spacing: -1px;
+    font-size: clamp(32px, 4.5vw, 56px);
+    margin-bottom: 24px;
+    letter-spacing: -1.2px;
+    line-height: 1.1;
 }
 
 .cta-text {
-    font-size: 20px;
-    margin-bottom: 40px;
-    opacity: 0.9;
+    font-size: 18px;
+    margin-bottom: 48px;
+    opacity: 0.85;
+    line-height: 1.7;
+    letter-spacing: -0.2px;
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button {
@@ -265,8 +308,9 @@ body {
 }
 
 .footer-text {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--dark-gray);
+    letter-spacing: 0.2px;
 }
 
 /* Work Page Styles */
@@ -275,7 +319,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2px;
     padding: 120px 0;
-    background-color: var(--black);
+    background-color: var(--white);
 }
 
 .work-item {
@@ -293,6 +337,10 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .work-item:hover img {
@@ -306,10 +354,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--dark-gray);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 /* Clients Page Styles */
@@ -322,17 +375,20 @@ body {
 .clients-hero h1 {
     font-family: 'Delight', sans-serif;
     font-weight: 900;
-    font-size: clamp(48px, 6vw, 80px);
+    font-size: clamp(42px, 5.5vw, 72px);
     color: var(--black);
-    margin-bottom: 30px;
-    letter-spacing: -2px;
+    margin-bottom: 32px;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
 }
 
 .clients-hero p {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--dark-gray);
-    max-width: 600px;
+    max-width: 65ch;
     margin: 0 auto;
+    line-height: 1.75;
+    letter-spacing: -0.1px;
 }
 
 .case-studies {
@@ -355,17 +411,19 @@ body {
 .case-study-title {
     font-family: 'Delight', sans-serif;
     font-weight: 900;
-    font-size: 48px;
+    font-size: clamp(32px, 4vw, 44px);
     color: var(--black);
-    margin-bottom: 10px;
-    letter-spacing: -1px;
+    margin-bottom: 12px;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
 }
 
 .case-study-subtitle {
-    font-size: 16px;
+    font-size: 13px;
     color: var(--dark-gray);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
+    font-weight: 500;
 }
 
 .case-study-content {
@@ -376,9 +434,19 @@ body {
 }
 
 .case-study-text {
-    font-size: 18px;
-    line-height: 1.9;
+    font-size: 17px;
+    line-height: 1.8;
     color: var(--dark-gray);
+    max-width: 65ch;
+    letter-spacing: -0.1px;
+}
+
+.case-study-text p {
+    margin-bottom: 1.5em;
+}
+
+.case-study-text p:last-child {
+    margin-bottom: 0;
 }
 
 .case-study-image {
@@ -401,17 +469,20 @@ body {
 .contact-hero h1 {
     font-family: 'Delight', sans-serif;
     font-weight: 900;
-    font-size: clamp(48px, 6vw, 80px);
+    font-size: clamp(42px, 5.5vw, 72px);
     color: var(--black);
-    margin-bottom: 30px;
-    letter-spacing: -2px;
+    margin-bottom: 32px;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
 }
 
 .contact-hero p {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--dark-gray);
-    max-width: 600px;
+    max-width: 65ch;
     margin: 0 auto;
+    line-height: 1.75;
+    letter-spacing: -0.1px;
 }
 
 .contact-section {
@@ -431,10 +502,11 @@ body {
 .contact-info h2 {
     font-family: 'Delight', sans-serif;
     font-weight: 900;
-    font-size: 48px;
+    font-size: clamp(32px, 4vw, 44px);
     color: var(--black);
-    margin-bottom: 40px;
-    letter-spacing: -1px;
+    margin-bottom: 48px;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
 }
 
 .contact-details {
@@ -442,10 +514,11 @@ body {
 }
 
 .contact-details p {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--dark-gray);
-    margin-bottom: 15px;
-    line-height: 1.8;
+    margin-bottom: 1.2em;
+    line-height: 1.75;
+    letter-spacing: -0.1px;
 }
 
 .contact-details a {
@@ -469,24 +542,26 @@ body {
 
 .form-group label {
     display: block;
-    font-size: 12px;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     color: var(--dark-gray);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: 600;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 15px;
+    padding: 14px 16px;
     border: 1px solid rgba(52, 52, 52, 0.2);
     background-color: var(--cream);
     color: var(--black);
     font-size: 16px;
     font-family: inherit;
+    line-height: 1.6;
     transition: border-color 0.3s ease;
+    letter-spacing: -0.1px;
 }
 
 .form-group input:focus,
@@ -551,7 +626,11 @@ body {
     }
 
     .hero {
-        padding: 100px 20px 60px;
+        height: 100vh;
+    }
+
+    .hero-content {
+        padding: 0 20px;
     }
 
     .about-content {
