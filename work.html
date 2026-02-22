@@ -26,45 +26,15 @@
         </div>
     </nav>
 
-    <main>
-        <section class="work-grid">
-            <div class="work-item">
-                <img src="images/work/project-1.jpg" alt="Project 1" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 1</div>
-            </div>
-            <div class="work-item">
-                <img src="images/work/project-2.jpg" alt="Project 2" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 2</div>
-            </div>
-            <div class="work-item">
-                <img src="images/work/project-3.jpg" alt="Project 3" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 3</div>
-            </div>
-            <div class="work-item">
-                <img src="images/work/project-4.jpg" alt="Project 4" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 4</div>
-            </div>
-            <div class="work-item">
-                <img src="images/work/project-5.jpg" alt="Project 5" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 5</div>
-            </div>
-            <div class="work-item">
-                <img src="images/work/project-6.jpg" alt="Project 6" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 6</div>
-            </div>
-            <div class="work-item">
-                <img src="images/work/project-7.jpg" alt="Project 7" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 7</div>
-            </div>
-            <div class="work-item">
-                <img src="images/work/project-8.jpg" alt="Project 8" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 8</div>
-            </div>
-            <div class="work-item">
-                <img src="images/work/project-9.jpg" alt="Project 9" onerror="this.style.display='none';">
-                <div class="work-placeholder">Project 9</div>
-            </div>
-        </section>
+    <main class="work-page">
+        <header class="work-hero">
+            <h1 class="work-hero-title">Work</h1>
+            <p class="work-hero-subtitle">Selected shoots by category</p>
+        </header>
+
+        <div class="work-content" id="workContent">
+            <!-- Categories and shoots injected by work-gallery.js -->
+        </div>
     </main>
 
     <footer class="footer">
@@ -74,5 +44,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="work-gallery.js"></script>
 </body>
 </html>

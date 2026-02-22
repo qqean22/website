@@ -1,0 +1,89 @@
+{
+  "personal-branding": [],
+  "clothing": [
+    {
+      "shoot": "AHDLondon",
+      "images": [
+        "image_0001.webp",
+        "image_0002.webp",
+        "image_0003.webp",
+        "image_0007.webp",
+        "IMG_0433.webp",
+        "IMG_0434.webp"
+      ]
+    },
+    {
+      "shoot": "PrettyCoverd",
+      "images": [
+        "image_0001.webp",
+        "image_0002.webp",
+        "image_0003.webp",
+        "image_0004.webp",
+        "image_0006.webp",
+        "image_0007.webp"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "shoot": "A9-Fragrances",
+      "images": [
+        "0001.webp",
+        "0002.webp",
+        "0003.webp",
+        "0004.webp",
+        "0005.webp",
+        "0006.webp",
+        "image_0001.webp",
+        "image_0002.webp",
+        "image_0003.webp",
+        "image_0004.webp",
+        "image_0005.webp",
+        "image_0006.webp",
+        "image_0007.webp"
+      ]
+    },
+    {
+      "shoot": "Abyan",
+      "images": [
+        "project-1.jpg",
+        "project-2.jpg",
+        "project-3.jpg",
+        "project-4.jpg",
+        "project-5.jpg"
+      ]
+    },
+    {
+      "shoot": "QA-skincare",
+      "images": [
+        "image_0001.webp",
+        "image_0002.webp",
+        "image_0003.webp",
+        "image_0004.webp",
+        "image_0005.webp"
+      ]
+    },
+    {
+      "shoot": "Quwa-Skincare",
+      "images": [
+        "image_0001.webp",
+        "image_0002.webp",
+        "image_0003.webp",
+        "image_0004.webp",
+        "image_0005.webp",
+        "image_0006.webp",
+        "image_0007.webp",
+        "image_0008.webp",
+        "image_0009.webp"
+      ]
+    },
+    {
+      "shoot": "Roja-Parfums",
+      "images": [
+        "project-6.webp",
+        "project-7.webp"
+      ]
+    }
+  ],
+  "events": []
+}
