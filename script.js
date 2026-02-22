@@ -35,20 +35,14 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form values
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-
-        // Here you would typically send the form data to a server
-        // For now, we'll just show an alert
-        alert('Thank you for your message! We\'ll get back to you soon.');
-        
-        // Reset form
-        contactForm.reset();
+        const nameEl = document.getElementById('name');
+        const emailEl = document.getElementById('email');
+        const subjectEl = document.getElementById('subject');
+        const messageEl = document.getElementById('message');
+        if (nameEl && emailEl && subjectEl && messageEl) {
+            alert('Thank you for your message. We\'ll be in touch soon.');
+            contactForm.reset();
+        }
     });
 }
 

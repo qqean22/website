@@ -235,10 +235,10 @@
 
             if (!hasAny) {
                 filterWrap.remove();
-                container.innerHTML = '<p class="work-empty">No shoots yet. Add folders under <code>images/work/<var>category</var>/<var>shoot-name</var>/</code> and run <code>node scripts/update-gallery.js</code>.</p>';
+                container.innerHTML = '<p class="work-empty">No work to show yet. Check back soon.</p>';
             }
         })
         .catch(function () {
-            container.innerHTML = '<p class="work-empty">Load this page via a local server to view the gallery.</p>';
+            container.innerHTML = '<p class="work-empty">Gallery is temporarily unavailable.</p>';
         });
 })();
